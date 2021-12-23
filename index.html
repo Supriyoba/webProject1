@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button,
+        h1,
+        #controls,
+        input {
+            background-color: #669933;
+            border: 2px solid #666633;
+            color: #333300;
+            font-size: 16pt;
+            font-family: "Verdana", sans-serif;
+            padding: 4px;
+            text-align: center;
+        }
+
+        button,
+        input {
+            background-color: white;
+        }
+
+        #printchatbox {
+            border: 5px solid #666633;
+            height: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            width: 750px;
+        }
+
+        #garden {
+            background-color: #669933;
+            border: 5px solid #666633;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            width: 750px;
+        }
+
+        #controls {
+            margin: 20px;
+            text-align: center;
+        }
+
+        img {
+            margin: 0px;
+            padding: 0px;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='printchatbox'>
+    </div>
+
+    <div id="garden">
+        <img src="image/2-1.jpg" id="text1" style="display: none;">
+        <img src="image/2-2.jpg" id="text2" style="display: none;">
+        <img src="image/2-3.jpg" id="text3" style="display:none;">
+        <img src="image/2-4.jpg" id="text4" style="display:none;">
+    </div>
+
+    <div id="controls">
+        Input title: <input type="text" id='fname' class='chatinput' onkeyup="annotate()">
+    </div>
+    <div id="controls">
+
+        <input type="checkbox" id="myCheck1" onclick="myFunction1()" />Oracle
+        <input type="checkbox" id="myCheck2" onclick="myFunction2()" />MySQL
+        <input type="checkbox" id="myCheck3" onclick="myFunction3()" />SQL Server
+        <input type="checkbox" id="myCheck4" onclick="myFunction4()" />MongoDB
+
+    </div>
+
+    <script>
+        // Write Javascript codes
+
+        function annotate() {
+            var typed = document.getElementById("fname").value;
+            document.getElementById("printchatbox").innerHTML = typed;
+        }
+        function myFunction1() {
+            var checkBox = document.getElementById("myCheck1");
+            var text = document.getElementById("text1");
+
+
+            if (checkBox.checked == true) {
+                text.style.display = "inline-block";
+
+            } else {
+                text.style.display = "none";
+
+
+
+            }
+
+        }
+
+
+        function myFunction2() {
+            var checkBox = document.getElementById("myCheck2");
+            var text = document.getElementById("text2");
+
+
+            if (checkBox.checked == true) {
+                text.style.display = "inline-block";
+
+            } else {
+                text.style.display = "none";
+
+
+
+            }
+
+        }
+
+        function myFunction3() {
+            var checkBox = document.getElementById("myCheck3");
+            var text = document.getElementById("text3");
+
+
+            if (checkBox.checked == true) {
+                text3.style.display = "inline-block";
+
+            } else {
+                text.style.display = "none";
+
+
+
+            }
+
+        }
+
+        function myFunction4() {
+            var checkBox = document.getElementById("myCheck4");
+            var text4 = document.getElementById("text4");
+
+
+            if (checkBox.checked == true) {
+                text4.style.display = "inline-block";
+
+            } else {
+                text.style.display = "none";
+
+
+
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
